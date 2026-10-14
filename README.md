@@ -61,4 +61,4 @@ This plugin uses **internal** APIs of JetBrains AI Assistant. It may break on ID
 
 ## License
 
-Copyright © NOW Tech. All rights reserved unless a license file is added separately.
+[MIT](LICENSE) © [NOW Tech](https://nowtech.dev)
