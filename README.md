@@ -41,7 +41,15 @@ JetBrains IDE plugin that automatically approves sensitive actions in **AI Chat*
 
 ## Install
 
-1. **Settings → Plugins → ⚙ → Install Plugin from Disk…** → select the ZIP  
+### JetBrains Marketplace
+
+[![Install to JetBrains IDE(s)](https://img.shields.io/badge/JetBrains_Marketplace-Install-000000?style=for-the-badge&logo=jetbrains)](https://plugins.jetbrains.com/plugin/35143-ai-chat-auto-always-allow)
+
+</details>
+
+### Install from disk (development build)
+
+1. **Settings → Plugins → ⚙ → Install Plugin from Disk…** → select the ZIP from `./builder build`  
 2. **Restart the IDE** (required; dynamic load is not supported)
 
 ## Verify
