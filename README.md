@@ -57,7 +57,7 @@ Logger id: `dev.nowtech.aichat.autoapply`
 
 ## Disclaimer
 
-This plugin uses **internal** APIs of JetBrains AI Assistant. It may break on IDE or AI Assistant updates. Not affiliated with JetBrains or Cursor.
+This plugin uses **internal** APIs of JetBrains AI Assistant. It may break on IDE or AI Assistant updates. Not affiliated with JetBrains.
 
 ## License
 
