@@ -1,0 +1,45 @@
+<idea-plugin>
+  <id>dev.nowtech.aichat.autoapply</id>
+  <name>AI Chat: Auto Always Allow</name>
+  <vendor url="https://nowtech.dev">NOW Tech</vendor>
+  <description><![CDATA[
+    Automatically approves sensitive actions in JetBrains AI Chat (including terminal commands and
+    MCP agent tool permissions via ACP), by selecting <b>Allow always</b> when offered
+    — the same as clicking that option in the chat UI.<br/><br/>
+    <a href="https://nowtech.dev"><font color="#589DF6">nowtech.dev</font></a>
+  ]]></description>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.ml.llm</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <projectService
+        serviceImplementation="dev.nowtech.aichat.autoapply.AutoAllowProjectService"/>
+    <projectActivity implementation="dev.nowtech.aichat.autoapply.AutoAllowProjectActivity"/>
+    <postStartupActivity implementation="dev.nowtech.aichat.autoapply.AutoAllowStartupActivity"/>
+    <applicationConfigurable
+        parentId="tools"
+        instance="dev.nowtech.aichat.autoapply.settings.AutoAllowConfigurable"
+        id="dev.nowtech.aichat.autoapply.settings"
+        displayName="AI Chat Auto Allow"/>
+    <applicationService
+        serviceImplementation="dev.nowtech.aichat.autoapply.settings.AutoAllowSettings"/>
+  </extensions>
+
+  <actions>
+    <action
+        id="dev.nowtech.aichat.autoapply.ToggleAutoAllow"
+        class="dev.nowtech.aichat.autoapply.ToggleAutoAllowAction"
+        text="AI Chat Auto Allow"/>
+    <group id="dev.nowtech.aichat.autoapply.ToolsGroup">
+      <reference ref="dev.nowtech.aichat.autoapply.ToggleAutoAllow"/>
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+    </group>
+  </actions>
+
+  <applicationListeners>
+    <listener
+        class="dev.nowtech.aichat.autoapply.AutoAllowProjectListener"
+        topic="com.intellij.openapi.project.ProjectManagerListener"/>
+  </applicationListeners>
+</idea-plugin>

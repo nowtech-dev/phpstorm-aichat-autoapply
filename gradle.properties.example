@@ -1,0 +1,8 @@
+kotlin.code.style=official
+org.gradle.jvmargs=-Xmx2048m
+
+# Local PhpStorm / IntelliJ installation (WSL path to Windows install shown)
+phpstorm.home=/mnt/c/Program Files/JetBrains/PhpStorm 2026.2.3
+
+# AI Assistant plugin bundle: .../plugins/ml-llm/lib (after installing com.intellij.ml.llm)
+ml.llm.lib=/path/to/JetBrains/.../plugins/ml-llm/lib

@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+build/
+.kotlin/
+.intellijPlatform/
+
+# Local SDK paths (copy from gradle.properties.example)
+gradle.properties
+
+# IDE
+.idea/
+*.iml
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & env
+*.log
+.env
+.env.*
